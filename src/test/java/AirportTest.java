@@ -9,11 +9,11 @@ public class AirportTest {
     Plane plane1;
     Plane plane2;
     Flight flight1;
-    Passenger passenger;
+    Passenger passenger1;
 
     @Before
     public void before() {
-        passenger = new Passenger("Filip Kuszenin");
+        passenger1 = new Passenger("Filip Kuszenin");
         plane1 = new Plane(1, PlaneType.BOEING747, AirlineName.RYANAIR);
         plane2 = new Plane(2, PlaneType.BOEING747, AirlineName.RYANAIR);
         flight1 = new Flight("MUN001", "Munich");
@@ -79,11 +79,12 @@ public class AirportTest {
         assertEquals("There's no plane you are looking for!", returningMessage);
     }
 
-//    @Test
-//    public void countBookings() {
-//        airport.createBooking();
-//        assertEquals(1, airport.countBookings());
-//    }
+    @Test
+    public void hasCreateBookings() {
+        String outcome = airport.createBooking(passenger1, flight1, 250.00);
+        assertEquals(1, airport.countBookings());
+        assertEquals("New Booking has been created!", outcome);
+    }
 
 
 

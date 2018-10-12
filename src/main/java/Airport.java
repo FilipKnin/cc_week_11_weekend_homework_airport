@@ -54,4 +54,21 @@ public class Airport {
             return "There's no plane you are looking for!";
         }
     }
+
+    public int countBookings() {
+        return this.bookingsList.size();
+    }
+
+    public String createBooking(Passenger passenger, Flight flight, double price) {
+        Booking newBooking = new Booking(passenger, flight, price);
+        newBooking.addPassenger(passenger);
+        newBooking.addFlight(flight);
+        addBookingToBookingsList(newBooking);
+        return "New Booking has been created!";
+
+    }
+
+    private void addBookingToBookingsList(Booking booking) {
+        this.bookingsList.add(booking);
+    }
 }
