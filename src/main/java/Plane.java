@@ -24,4 +24,8 @@ public class Plane {
     public PlaneType getPlaneType() {
         return this.planeType;
     }
+
+    public AirlineName getAirlineName() {
+        return this.airlineName;
+    }
 }

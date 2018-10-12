@@ -24,9 +24,15 @@ public class PlaneTest {
     public void hasPassengers() {
         assertEquals(0, plane.countPassengers());
     }
+
     @Test
     public void hasPlaneType() {
         assertEquals(PlaneType.BOEING747, plane.getPlaneType());
+    }
+
+    @Test
+    public void hasAirlineName() {
+        assertEquals(AirlineName.RYANAIR, plane.getAirlineName());
     }
 }
 
