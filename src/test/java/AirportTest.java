@@ -79,6 +79,12 @@ public class AirportTest {
         assertEquals("There's no plane you are looking for!", returningMessage);
     }
 
+//    @Test
+//    public void countBookings() {
+//        airport.createBooking();
+//        assertEquals(1, airport.countBookings());
+//    }
+
 
 
 }
