@@ -8,7 +8,7 @@ public class AirportTest {
     Airport airport;
     Plane plane1;
     Plane plane2;
-    Flight flight;
+    Flight flight1;
     Passenger passenger;
 
     @Before
@@ -16,7 +16,7 @@ public class AirportTest {
         passenger = new Passenger();
         plane1 = new Plane(1, PlaneType.BOEING747, AirlineName.RYANAIR);
         plane2 = new Plane(2, PlaneType.BOEING747, AirlineName.RYANAIR);
-        flight = new Flight("MUN001", "Munich");
+        flight1 = new Flight("MUN001", "Munich");
         airport = new Airport("EDI");
     }
 
@@ -55,6 +55,12 @@ public class AirportTest {
     public void countFlights() {
         airport.addPlaneToHanger(plane1);
         assertEquals(0, airport.countFlights());
+    }
+
+    @Test
+    public void addFlightToFlightsList() {
+        airport.addFlightToFlightList(flight1);
+        assertEquals(1, airport.countFlights());
     }
 
 
