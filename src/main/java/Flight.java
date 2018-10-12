@@ -19,4 +19,8 @@ public class Flight {
     public String getDestination() {
         return this.destination;
     }
+
+    public boolean flighthasPlane() {
+       return this.plane.isEmpty();
+    }
 }

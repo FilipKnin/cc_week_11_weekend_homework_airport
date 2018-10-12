@@ -26,6 +26,11 @@ public class FlightTest {
         assertEquals("Munich", flight.getDestination());
     }
 
+    @Test
+    public void hasPlaneEmptyArray() {
+        assertEquals(true, flight.flighthasPlane());
+    }
+
 
 
 }
