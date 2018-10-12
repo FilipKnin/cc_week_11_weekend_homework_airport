@@ -20,7 +20,11 @@ public class Flight {
         return this.destination;
     }
 
-    public boolean flighthasPlane() {
+    public boolean flightHasPlane() {
        return this.plane.isEmpty();
+    }
+
+    public void addPlaneToFlight(Plane plane) {
+        this.plane.add(plane);
     }
 }
