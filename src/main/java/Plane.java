@@ -20,4 +20,8 @@ public class Plane {
     public int countPassengers() {
         return this.passengers.size();
     }
+
+    public PlaneType getPlaneType() {
+        return this.planeType;
+    }
 }
