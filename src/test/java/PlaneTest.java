@@ -11,8 +11,9 @@ public class PlaneTest {
 
     @Before
     public void before() {
-        plane = new Plane(1, PlaneType.BOEING747, AirlineName.RYANAIR);
         passenger = new Passenger();
+        plane = new Plane(1, PlaneType.BOEING747, AirlineName.RYANAIR);
+
     }
 
     @Test
