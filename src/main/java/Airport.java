@@ -5,11 +5,14 @@ public class Airport {
     private String code;
     private ArrayList<Plane> hanger;
     private ArrayList<Flight> flightsList;
+    private ArrayList<Booking> bookingsList;
+
 
     public Airport(String code) {
         this.code = code;
         this.hanger = new ArrayList<>();
         this.flightsList = new ArrayList<>();
+        this.bookingsList = new ArrayList<>();
     }
 
     public String getAirportCode() {
