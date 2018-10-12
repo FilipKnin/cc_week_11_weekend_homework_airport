@@ -16,4 +16,8 @@ public class Plane {
     public int getId() {
         return this.id;
     }
+
+    public int countPassengers() {
+        return this.passengers.size();
+    }
 }
