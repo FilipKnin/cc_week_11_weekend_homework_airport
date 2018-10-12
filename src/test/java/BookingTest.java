@@ -38,6 +38,12 @@ public class BookingTest {
         assertEquals(250.00, booking.getPrice(), 0.01);
     }
 
+    @Test
+    public void hasAddPassenger() {
+        booking.addPassenger(passenger);
+        assertEquals(true, booking.hasPassenger());
+    }
+
 
 
 }

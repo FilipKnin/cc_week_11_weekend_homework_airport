@@ -24,4 +24,8 @@ public class Booking {
     public double getPrice() {
         return this.price;
     }
+
+    public void addPassenger(Passenger passenger) {
+        this.passengerObject.add(passenger);
+    }
 }
