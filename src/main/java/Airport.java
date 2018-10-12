@@ -22,4 +22,9 @@ public class Airport {
     public void addPlaneToHanger(Plane plane) {
         this.hanger.add(plane);
     }
+
+    public Plane removePlaneFromHanger(Plane plane) {
+        int indexOfRemovedPlane = this.hanger.indexOf(plane);
+        return this.hanger.remove(indexOfRemovedPlane);
+    }
 }
