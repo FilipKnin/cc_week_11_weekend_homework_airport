@@ -14,7 +14,12 @@ public class Airport {
         return this.code;
     }
 
-    public int countPlanesInHangar() {
+    public int countPlanesInHanger() {
         return this.hanger.size();
+    }
+
+
+    public void addPlaneToHanger(Plane plane) {
+        this.hanger.add(plane);
     }
 }

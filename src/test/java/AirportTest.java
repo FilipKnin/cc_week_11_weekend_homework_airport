@@ -24,9 +24,17 @@ public class AirportTest {
     }
 
     @Test
-    public void countPlanesInHangar() {
-        assertEquals(0, airport.countPlanesInHangar());
+    public void countPlanesInHanger() {
+        assertEquals(0, airport.countPlanesInHanger());
     }
+
+    @Test
+    public void addPlaneToHanger() {
+        airport.addPlaneToHanger(plane1);
+        assertEquals(1, airport.countPlanesInHanger());
+    }
+
+
 
 
 
