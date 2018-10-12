@@ -51,6 +51,12 @@ public class AirportTest {
         assertEquals(plane1, airport.removePlaneFromHanger(plane1));
     }
 
+    @Test
+    public void countFlights() {
+        airport.addPlaneToHanger(plane1);
+        assertEquals(0, airport.countFlights());
+    }
+
 
 
 
