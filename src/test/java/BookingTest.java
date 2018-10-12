@@ -18,7 +18,7 @@ public class BookingTest {
         plane1 = new Plane(1, PlaneType.BOEING747, AirlineName.RYANAIR);
         plane2 = new Plane(2, PlaneType.BOEING747, AirlineName.RYANAIR);
         flight1 = new Flight("MUN001", "Munich");
-        booking = new Booking(passenger, flight1, 250);
+        booking = new Booking(passenger, flight1, 250.00);
         airport = new Airport("EDI");
 
     }
@@ -32,5 +32,12 @@ public class BookingTest {
     public void hasBookedFlight() {
         assertEquals(false, booking.hasBookedFlight());
     }
+
+    @Test
+    public void hasPrice() {
+        assertEquals(250.00, booking.getPrice(), 0.01);
+    }
+
+
 
 }

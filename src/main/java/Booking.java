@@ -20,4 +20,8 @@ public class Booking {
         boolean outcome = this.BookedFlight.isEmpty();
         return !outcome;
     }
+
+    public double getPrice() {
+        return this.price;
+    }
 }
