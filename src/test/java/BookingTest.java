@@ -44,6 +44,12 @@ public class BookingTest {
         assertEquals(true, booking.hasPassenger());
     }
 
+    @Test
+    public void hasAddFlight() {
+        booking.addFlight(flight1);
+        assertEquals(true, booking.hasBookedFlight());
+    }
+
 
 
 }

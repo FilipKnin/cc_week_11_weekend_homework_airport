@@ -28,4 +28,8 @@ public class Booking {
     public void addPassenger(Passenger passenger) {
         this.passengerObject.add(passenger);
     }
+
+    public void addFlight(Flight flight) {
+        this.BookedFlight.add(flight);
+    }
 }
