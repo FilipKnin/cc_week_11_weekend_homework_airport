@@ -63,10 +63,21 @@ public class AirportTest {
         assertEquals(1, airport.countFlights());
     }
 
+    @Test
+    public void createFlightPlaneInHanger() {
+        airport.addPlaneToHanger(plane1);
+        String returningMessage = airport.createFlight("LON002", "London", plane1);
+        assertEquals(1, airport.countFlights());
+        assertEquals(0, airport.countPlanesInHanger());
+        assertEquals("Flight number LON002 to London has been created.",returningMessage);
+    }
 
-
-
-
+    @Test
+    public void createFlightNoPlaneInHanger() {
+        String returningMessage = airport.createFlight("LON002", "London", plane1);
+        assertEquals(0, airport.countFlights());
+        assertEquals("There's no plane you are looking for!", returningMessage);
+    }
 
 
 

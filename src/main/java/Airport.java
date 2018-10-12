@@ -38,4 +38,17 @@ public class Airport {
     public void addFlightToFlightList(Flight flight) {
         this.flightsList.add(flight);
     }
+
+    public String createFlight(String flightNumber, String destination, Plane plane) {
+        if (this.hanger.contains(plane)) {
+            removePlaneFromHanger(plane);
+            Flight newFlight = new Flight(flightNumber, destination);
+            newFlight.addPlaneToFlight(plane);
+            addFlightToFlightList(newFlight);
+            return "Flight number " + flightNumber + " to " + destination + " has been created.";
+
+        } else {
+            return "There's no plane you are looking for!";
+        }
+    }
 }
