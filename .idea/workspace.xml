@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="03bd0dc1-524d-4941-9320-f5ba629bef98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AirportTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AirportTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookingTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,12 +40,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="java" value="4152" />
+          <entry key="java" value="4208" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4152" />
+          <entry key="JAVA" value="4208" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
@@ -75,24 +74,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Booking.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-              <folding>
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/BookingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            <state relative-caret-position="355">
+              <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#682#683#0" expanded="true" />
@@ -437,8 +432,8 @@
         <option value="$PROJECT_DIR$/src/test/java/FlightTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/PlaneTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/AirportTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BookingTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Booking.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BookingTest.java" />
       </list>
     </option>
   </component>
@@ -500,7 +495,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539357181699" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539357451221" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -566,9 +561,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_airport_homework_test - 2018.10.12 at 15h 29m 51s.xml">
-      <configuration name="All in airport_homework_test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AirportTest - 2018.10.12 at 15h 31m 43s.xml">
       <configuration name="AirportTest" configurationId="JUnit" />
     </history-entry>
@@ -596,6 +588,9 @@
     <history-entry file="All_in_airport_homework_test - 2018.10.12 at 15h 52m 35s.xml">
       <configuration name="All in airport_homework_test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_airport_homework_test - 2018.10.12 at 16h 13m 11s.xml">
+      <configuration name="All in airport_homework_test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -608,14 +603,14 @@
       <window_info id="Image Layers" order="4" />
       <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" x="26" y="629" width="1398" height="230" id="Terminal" order="0" sideWeight="0.50500715" side_tool="true" visible="true" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" x="26" y="629" width="1398" height="230" id="Terminal" order="0" sideWeight="0.50572246" side_tool="true" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.49713877" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.49642345" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49499285" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49427754" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4985694" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -799,25 +794,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Booking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BookingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state relative-caret-position="355">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#682#683#0" expanded="true" />
             <element signature="e#721#722#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Booking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding>
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
           </folding>
         </state>
       </provider>

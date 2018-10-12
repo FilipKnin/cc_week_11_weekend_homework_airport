@@ -12,6 +12,12 @@ public class Booking {
     }
 
     public boolean hasPassenger() {
-        return this.passengerObject.isEmpty();
+        boolean outcome = this.passengerObject.isEmpty();
+        return !outcome;
+    }
+
+    public boolean hasBookedFlight() {
+        boolean outcome = this.BookedFlight.isEmpty();
+        return !outcome;
     }
 }

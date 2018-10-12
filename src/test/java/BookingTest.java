@@ -24,8 +24,13 @@ public class BookingTest {
     }
 
     @Test
-    public void hasPassengerObject() {
-        assertEquals(true, booking.hasPassenger());
+    public void hasPassengerObjectNoObject() {
+        assertEquals(false, booking.hasPassenger());
+    }
+
+    @Test
+    public void hasBookedFlight() {
+        assertEquals(false, booking.hasBookedFlight());
     }
 
 }
