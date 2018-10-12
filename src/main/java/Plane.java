@@ -28,4 +28,8 @@ public class Plane {
     public AirlineName getAirlineName() {
         return this.airlineName;
     }
+
+    public int getPlaneCapacity() {
+        return this.planeType.getCapacity();
+    }
 }

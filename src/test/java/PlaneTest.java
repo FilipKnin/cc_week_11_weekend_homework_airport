@@ -34,5 +34,10 @@ public class PlaneTest {
     public void hasAirlineName() {
         assertEquals(AirlineName.RYANAIR, plane.getAirlineName());
     }
+
+    @Test
+    public void getPlaneCapacityFromEnum() {
+        assertEquals(5, plane.getPlaneCapacity());
+    }
 }
 
