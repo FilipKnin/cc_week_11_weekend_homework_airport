@@ -23,6 +23,12 @@ public class AirportTest {
         assertEquals("EDI", airport.getAirportCode());
     }
 
+    @Test
+    public void countPlanesInHangar() {
+        assertEquals(0, airport.countPlanesInHangar());
+    }
+
+
 
 
 
