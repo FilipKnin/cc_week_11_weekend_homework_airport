@@ -56,5 +56,15 @@ public class PlaneTest {
         assertEquals(5, plane.countPassengers());
     }
 
+    @Test
+    public void hasCheckSpaceFalse() {
+        plane.addPassenger(passenger);
+        plane.addPassenger(passenger);
+        plane.addPassenger(passenger);
+        plane.addPassenger(passenger);
+        plane.addPassenger(passenger);
+        assertEquals(false, plane.checkSpace());
+    }
+
 }
 
