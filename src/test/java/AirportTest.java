@@ -148,21 +148,23 @@ public class AirportTest {
 
     }
 
-//    @Test
-//    public void canFindReplacementPlane() {
-//        plane3.addPassenger(passenger1);
-//        plane3.addPassenger(passenger1);
-//        flight1.addPlaneToFlight(plane3);
-//        airport.addPlaneToHanger(plane1);
-//        airport.addPlaneToHanger(plane4);
-//        airport.addPlaneToHanger(plane5);
-//        booking1.addFlight(flight1);
-//        booking2.addFlight(flight1);
-//        airport.addBookingToBookingsList(booking1);
-//        airport.addBookingToBookingsList(booking2);
-//        assertEquals(plane1, airport.findMostSuitablePlane(flight1));
-//
-//    }
+    @Test
+    public void canFindReplacementPlane() {
+        plane3.addPassenger(passenger1);
+        plane3.addPassenger(passenger1);
+        flight1.addPlaneToFlight(plane3);
+        airport.addPlaneToHanger(plane1);
+        airport.addPlaneToHanger(plane4);
+        airport.addPlaneToHanger(plane5);
+        booking1.addFlight(flight1);
+        booking2.addFlight(flight1);
+        airport.addBookingToBookingsList(booking1);
+        airport.addBookingToBookingsList(booking2);
+        assertEquals(plane1, airport.findReplacementPlane(flight1));
+        assertEquals(2, plane1.countPassengers());
+
+
+    }
 
 
 

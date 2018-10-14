@@ -108,4 +108,20 @@ public class Airport {
         mostSuitablePlane.replaceListOfPassengers(passengersList);
         return mostSuitablePlane;
     }
+
+    public Plane findReplacementPlane(Flight flight) {
+        Plane defaultPlane = this.hanger.get(0);
+        Plane brokenPlane = flight.getPlaneForFlight();
+        ArrayList<Passenger> passengersList = brokenPlane.getPassengers();
+        Plane replacementPlane = defaultPlane;
+
+        for (int i = 0; i <this.hanger.size() ; i++) {
+            Plane plane = this.hanger.get(i);
+            if (plane.checkEmptySeats() < replacementPlane.checkEmptySeats()) {
+                replacementPlane = plane;
+            }
+        }
+        replacementPlane.replaceListOfPassengers(passengersList);
+        return replacementPlane;
+    }
 }
