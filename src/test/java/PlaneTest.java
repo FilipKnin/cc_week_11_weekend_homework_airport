@@ -66,5 +66,13 @@ public class PlaneTest {
         assertEquals(false, plane.checkSpace());
     }
 
+    @Test
+    public void canCheckEmptySeats() {
+        plane.addPassenger(passenger);
+        plane.addPassenger(passenger);
+
+        assertEquals(3, plane.checkEmptySeats());
+    }
+
 }
 

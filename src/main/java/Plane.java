@@ -46,4 +46,10 @@ public class Plane {
     public void addPassenger(Passenger passenger) {
         this.passengers.add(passenger);
     }
+
+    public int checkEmptySeats() {
+        int planeCapacity = getPlaneCapacity();
+        int seatsTaken = countPassengers();
+        return planeCapacity - seatsTaken;
+    }
 }
