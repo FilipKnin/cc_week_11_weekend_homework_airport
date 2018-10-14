@@ -32,4 +32,14 @@ public class Plane {
     public int getPlaneCapacity() {
         return this.planeType.getCapacity();
     }
+
+    public boolean checkSpace() {
+        int planeCapacity = getPlaneCapacity();
+        int numberOfPassengers = countPassengers();
+
+        if (numberOfPassengers < planeCapacity) {
+            return true;
+        }
+            return false;
+    }
 }

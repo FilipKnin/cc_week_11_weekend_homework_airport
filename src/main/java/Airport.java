@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Airport {
 
@@ -6,6 +7,7 @@ public class Airport {
     private ArrayList<Plane> hanger;
     private ArrayList<Flight> flightsList;
     private ArrayList<Booking> bookingsList;
+    private HashMap<Flight, Integer> bookingCounts;
 
 
     public Airport(String code) {
@@ -13,6 +15,7 @@ public class Airport {
         this.hanger = new ArrayList<>();
         this.flightsList = new ArrayList<>();
         this.bookingsList = new ArrayList<>();
+        this.bookingCounts = new HashMap<>();
     }
 
     public String getAirportCode() {
@@ -68,7 +71,21 @@ public class Airport {
 
     }
 
-    private void addBookingToBookingsList(Booking booking) {
+    public void addBookingToBookingsList(Booking booking) {
         this.bookingsList.add(booking);
     }
+
+    public HashMap<Flight, Integer> getBookingsMap() {
+        return this.bookingCounts;
+    }
+
+//    public void incrementBookingCount(Flight flight) {
+//        Integer bookingsCount = bookingCounts.get(flight);
+//        if (bookingsCount == null) {
+//            bookingsCount = 0;
+//        }
+//        bookingCounts.put(flight, bookingsCount + 1)
+//    }
+
+
 }

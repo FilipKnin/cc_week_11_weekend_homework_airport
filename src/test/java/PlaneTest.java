@@ -40,5 +40,10 @@ public class PlaneTest {
     public void getPlaneCapacityFromEnum() {
         assertEquals(5, plane.getPlaneCapacity());
     }
+
+    @Test
+    public void hasCheckSpaceTrue() {
+        assertEquals(true, plane.checkSpace());
+    }
 }
 

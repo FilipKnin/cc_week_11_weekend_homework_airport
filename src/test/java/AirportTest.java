@@ -86,6 +86,16 @@ public class AirportTest {
         assertEquals("New Booking has been created!", outcome);
     }
 
+//    @Test
+//    public void canGetBookingCounter() {
+//        airport.createBooking(passenger1, flight1, 250.00);
+//        airport.createBooking(passenger1, flight1, 250.00);
+//        assertEquals(2, airport.countBookings());
+//
+//    }
+
+
+
 
 
 }
