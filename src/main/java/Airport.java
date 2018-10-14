@@ -63,11 +63,16 @@ public class Airport {
     }
 
     public String createBooking(Passenger passenger, Flight flight, double price) {
-        Booking newBooking = new Booking(passenger, flight, price);
-        newBooking.addPassenger(passenger);
-        newBooking.addFlight(flight);
-        addBookingToBookingsList(newBooking);
-        return "New Booking has been created!";
+        Plane plane = flight.getPlaneForFlight();
+        if (plane.checkSpace() == true) {
+            Booking newBooking = new Booking(passenger, flight, price);
+            newBooking.addPassenger(passenger);
+            newBooking.addFlight(flight);
+            plane.addPassenger(passenger);
+            addBookingToBookingsList(newBooking);
+            return "New Booking has been created!";
+        }
+            return "This flight is fully-booked!";
 
     }
 

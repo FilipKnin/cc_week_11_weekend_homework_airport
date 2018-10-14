@@ -81,9 +81,25 @@ public class AirportTest {
 
     @Test
     public void hasCreateBookings() {
+        flight1.addPlaneToFlight(plane1);
         String outcome = airport.createBooking(passenger1, flight1, 250.00);
         assertEquals(1, airport.countBookings());
         assertEquals("New Booking has been created!", outcome);
+    }
+
+    @Test
+    public void canNotCreateBookingIfPlaneIsFull() {
+        flight1.addPlaneToFlight(plane1);
+        plane1.addPassenger(passenger1);
+        plane1.addPassenger(passenger1);
+        plane1.addPassenger(passenger1);
+        plane1.addPassenger(passenger1);
+        plane1.addPassenger(passenger1);
+        String outcome = airport.createBooking(passenger1, flight1, 250.00);
+        assertEquals(0, airport.countBookings());
+        assertEquals("This flight is fully-booked!", outcome);
+        assertEquals(5, plane1.countPassengers());
+
     }
 
 //    @Test
