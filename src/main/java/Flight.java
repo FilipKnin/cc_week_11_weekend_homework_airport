@@ -27,4 +27,8 @@ public class Flight {
     public void addPlaneToFlight(Plane plane) {
         this.plane.add(plane);
     }
+
+    public Plane getPlaneForFlight() {
+        return this.plane.get(0);
+    }
 }

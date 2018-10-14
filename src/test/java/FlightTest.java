@@ -37,6 +37,12 @@ public class FlightTest {
         assertEquals(false, flight.flightHasPlane());
     }
 
+    @Test
+    public void hasGetPlaneForFlight() {
+        flight.addPlaneToFlight(plane1);
+        assertEquals(plane1, flight.getPlaneForFlight());
+    }
+
 
 
 
