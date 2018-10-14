@@ -96,6 +96,7 @@ public class Airport {
 
     public Plane findMostSuitablePlane(Flight flight) {
         Plane defaultPlane = flight.getPlaneForFlight();
+        ArrayList<Passenger> passengersList = defaultPlane.getPassengers();
         Plane mostSuitablePlane = defaultPlane;
 
         for (int i = 0; i <this.hanger.size() ; i++) {
@@ -104,9 +105,7 @@ public class Airport {
                 mostSuitablePlane = plane;
             }
         }
-
-
-
+        mostSuitablePlane.replaceListOfPassengers(passengersList);
         return mostSuitablePlane;
     }
 }

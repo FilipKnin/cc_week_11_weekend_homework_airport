@@ -52,4 +52,12 @@ public class Plane {
         int seatsTaken = countPassengers();
         return planeCapacity - seatsTaken;
     }
+
+    public ArrayList getPassengers() {
+        return this.passengers;
+    }
+
+    public void replaceListOfPassengers(ArrayList newListOfPassengers) {
+        this.passengers = newListOfPassengers;
+    }
 }

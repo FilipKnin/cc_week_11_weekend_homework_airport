@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class PlaneTest {
@@ -73,6 +75,19 @@ public class PlaneTest {
 
         assertEquals(3, plane.checkEmptySeats());
     }
+
+    @Test
+    public void addArrayOfPassengersToPlane() {
+        plane.addPassenger(passenger);
+        plane.addPassenger(passenger);
+        ArrayList array2 = new ArrayList<>();
+        plane.replaceListOfPassengers(array2);
+
+        assertEquals(0, plane.countPassengers());
+    }
+
+
+
 
 }
 
