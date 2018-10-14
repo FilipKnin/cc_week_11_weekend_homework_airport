@@ -69,6 +69,7 @@ public class Airport {
             newBooking.addPassenger(passenger);
             newBooking.addFlight(flight);
             plane.addPassenger(passenger);
+            incrementFlightCount(flight);
             addBookingToBookingsList(newBooking);
             return "New Booking has been created!";
         }

@@ -12,14 +12,21 @@ public class AirportTest {
     Plane plane2;
     Flight flight1;
     Passenger passenger1;
+    Passenger passenger2;
+    Booking booking1;
+    Booking booking2;
 
     @Before
     public void before() {
         passenger1 = new Passenger("Filip Kuszenin");
+        passenger2 = new Passenger("Johny Bravo");
         plane1 = new Plane(1, PlaneType.BOEING747, AirlineName.RYANAIR);
         plane2 = new Plane(2, PlaneType.BOEING747, AirlineName.RYANAIR);
         flight1 = new Flight("MUN001", "Munich");
+        booking1 = new Booking(passenger1, flight1, 250.00);
+        booking2 = new Booking(passenger2, flight1, 250.00);
         airport = new Airport("EDI");
+
     }
 
     @Test
@@ -85,7 +92,8 @@ public class AirportTest {
     public void hasCreateBookings() {
         flight1.addPlaneToFlight(plane1);
         String outcome = airport.createBooking(passenger1, flight1, 250.00);
-        assertEquals(1, airport.countBookings());
+        airport.createBooking(passenger1, flight1, 250.00);
+        assertEquals(2, airport.countBookings());
         assertEquals("New Booking has been created!", outcome);
     }
 
@@ -107,12 +115,13 @@ public class AirportTest {
     @Test
     public void hasFlightCounter() {
         flight1.addPlaneToFlight(plane1);
-        airport.createBooking(passenger1, flight1, 250.00);
-        airport.createBooking(passenger1, flight1, 250.00);
+        booking1.addFlight(flight1);
+        airport.addBookingToBookingsList(booking1);
+        airport.addBookingToBookingsList(booking2);
         HashMap<Flight, Integer> result = airport.getFlightCounts();
-//        int count = result.get(booking.getFlight)
-        assertEquals(2, airport.countBookings());
-        assertEquals(2, airport.countBookings());
+//        int count = result.get(booking1.getFlightForBooking());
+//        assertEquals(2, airport.countBookings());
+//        assertEquals(2, count);
 
     }
 
