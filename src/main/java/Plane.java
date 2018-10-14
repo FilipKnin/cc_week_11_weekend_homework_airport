@@ -42,4 +42,8 @@ public class Plane {
         }
             return false;
     }
+
+    public void addPassenger(Passenger passenger) {
+        this.passengers.add(passenger);
+    }
 }
