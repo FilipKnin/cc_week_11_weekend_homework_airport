@@ -5,7 +5,7 @@ public class Booking {
     private ArrayList<Flight> BookedFlight;
     private double price;
 
-    public Booking(Passenger passenger, Flight flight, double price  ){
+    public Booking(Passenger passenger, Flight flight, double price ){
         this.price = price;
         this.BookedFlight = new ArrayList<>();
         this.passengerObject = new ArrayList<>();
@@ -31,5 +31,9 @@ public class Booking {
 
     public void addFlight(Flight flight) {
         this.BookedFlight.add(flight);
+    }
+
+    public Flight getFlightForBooking() {
+        return this.BookedFlight.get(0);
     }
 }

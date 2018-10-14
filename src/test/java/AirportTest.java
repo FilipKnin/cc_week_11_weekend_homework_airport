@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashMap;
+
 import static org.junit.Assert.assertEquals;
 
 public class AirportTest {
@@ -102,13 +104,17 @@ public class AirportTest {
 
     }
 
-//    @Test
-//    public void canGetBookingCounter() {
-//        airport.createBooking(passenger1, flight1, 250.00);
-//        airport.createBooking(passenger1, flight1, 250.00);
-//        assertEquals(2, airport.countBookings());
-//
-//    }
+    @Test
+    public void hasFlightCounter() {
+        flight1.addPlaneToFlight(plane1);
+        airport.createBooking(passenger1, flight1, 250.00);
+        airport.createBooking(passenger1, flight1, 250.00);
+        HashMap<Flight, Integer> result = airport.getFlightCounts();
+//        int count = result.get(booking.getFlight)
+        assertEquals(2, airport.countBookings());
+        assertEquals(2, airport.countBookings());
+
+    }
 
 
 

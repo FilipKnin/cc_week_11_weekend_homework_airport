@@ -50,6 +50,12 @@ public class BookingTest {
         assertEquals(true, booking.hasBookedFlight());
     }
 
+    @Test
+    public void canGetFlightForBooking() {
+        booking.addFlight(flight1);
+        assertEquals(flight1, booking.getFlightForBooking());
+    }
+
 
 
 }

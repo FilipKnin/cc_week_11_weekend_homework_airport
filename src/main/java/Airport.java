@@ -7,7 +7,7 @@ public class Airport {
     private ArrayList<Plane> hanger;
     private ArrayList<Flight> flightsList;
     private ArrayList<Booking> bookingsList;
-    private HashMap<Flight, Integer> bookingCounts;
+    private HashMap<Flight, Integer> flightCounts;
 
 
     public Airport(String code) {
@@ -15,7 +15,7 @@ public class Airport {
         this.hanger = new ArrayList<>();
         this.flightsList = new ArrayList<>();
         this.bookingsList = new ArrayList<>();
-        this.bookingCounts = new HashMap<>();
+        this.flightCounts = new HashMap<>();
     }
 
     public String getAirportCode() {
@@ -80,17 +80,19 @@ public class Airport {
         this.bookingsList.add(booking);
     }
 
-    public HashMap<Flight, Integer> getBookingsMap() {
-        return this.bookingCounts;
+    public HashMap<Flight, Integer> getFlightCounts() {
+        return this.flightCounts;
     }
 
-//    public void incrementBookingCount(Flight flight) {
-//        Integer bookingsCount = bookingCounts.get(flight);
-//        if (bookingsCount == null) {
-//            bookingsCount = 0;
-//        }
-//        bookingCounts.put(flight, bookingsCount + 1)
-//    }
+    public void incrementFlightCount(Flight flight) {
+        Integer flightCount = flightCounts.get(flight);
+        if (flightCount == null) {
+            flightCount = 0;
+        }
+        flightCounts.put(flight, flightCount + 1);
+    }
+
+
 
 
 }
