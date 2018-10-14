@@ -10,6 +10,9 @@ public class AirportTest {
     Airport airport;
     Plane plane1;
     Plane plane2;
+    Plane plane3;
+    Plane plane4;
+    Plane plane5;
     Flight flight1;
     Passenger passenger1;
     Passenger passenger2;
@@ -22,6 +25,9 @@ public class AirportTest {
         passenger2 = new Passenger("Johny Bravo");
         plane1 = new Plane(1, PlaneType.BOEING747, AirlineName.RYANAIR);
         plane2 = new Plane(2, PlaneType.BOEING747, AirlineName.RYANAIR);
+        plane3 = new Plane(3, PlaneType.BOEING787, AirlineName.RYANAIR);
+        plane4 = new Plane(4, PlaneType.AIRBUS350, AirlineName.RYANAIR);
+        plane5 = new Plane(5, PlaneType.AIRBUS380, AirlineName.RYANAIR);
         flight1 = new Flight("MUN001", "Munich");
         booking1 = new Booking(passenger1, flight1, 250.00);
         booking2 = new Booking(passenger2, flight1, 250.00);
@@ -122,6 +128,20 @@ public class AirportTest {
 //        int count = result.get(booking1.getFlightForBooking());
 //        assertEquals(2, airport.countBookings());
 //        assertEquals(2, count);
+
+    }
+
+    @Test
+    public void canFindMostSuitablePlane() {
+        flight1.addPlaneToFlight(plane3);
+        airport.addPlaneToHanger(plane1);
+        airport.addPlaneToHanger(plane4);
+        airport.addPlaneToHanger(plane5);
+        booking1.addFlight(flight1);
+        booking2.addFlight(flight1);
+        airport.addBookingToBookingsList(booking1);
+        airport.addBookingToBookingsList(booking2);
+        assertEquals(plane1, airport.findMostSuitablePlane(flight1));
 
     }
 

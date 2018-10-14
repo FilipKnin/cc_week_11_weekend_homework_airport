@@ -94,6 +94,19 @@ public class Airport {
     }
 
 
+    public Plane findMostSuitablePlane(Flight flight) {
+        Plane defaultPlane = flight.getPlaneForFlight();
+        Plane mostSuitablePlane = defaultPlane;
+
+        for (int i = 0; i <this.hanger.size() ; i++) {
+            Plane plane = this.hanger.get(i);
+            if (plane.checkEmptySeats() < mostSuitablePlane.checkEmptySeats()) {
+                mostSuitablePlane = plane;
+            }
+        }
 
 
+
+        return mostSuitablePlane;
+    }
 }
