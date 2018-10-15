@@ -111,15 +111,23 @@ public class Airport {
     }
 
     public Plane findReplacementPlane(Flight flight) {
-        Plane defaultPlane = this.hanger.get(0);
+        Plane defaultPlane = this.hanger.get(1);
+
         Plane brokenPlane = flight.getPlaneForFlight();
+        for (int i = 0; i <this.hanger.size() ; i++) {
+            Plane plane = this.hanger.get(i);
+            if (plane.getPlaneCapacity() >= brokenPlane.getPlaneCapacity()) {
+                defaultPlane = plane;
+            }
+        }
+
         ArrayList<Passenger> passengersList = brokenPlane.getPassengers();
         Plane replacementPlane = defaultPlane;
 
         for (int i = 0; i <this.hanger.size() ; i++) {
             Plane plane = this.hanger.get(i);
             plane.replaceListOfPassengers(passengersList);
-            if (plane.checkEmptySeats() < replacementPlane.checkEmptySeats()) {
+            if (plane.checkEmptySeats() < replacementPlane.checkEmptySeats() && replacementPlane.checkEmptySeats() >= 0) {
                 replacementPlane = plane;
             }
         }
