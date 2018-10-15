@@ -101,7 +101,8 @@ public class Airport {
 
         for (int i = 0; i <this.hanger.size() ; i++) {
             Plane plane = this.hanger.get(i);
-            if (plane.checkEmptySeats() < mostSuitablePlane.checkEmptySeats()) {
+            plane.replaceListOfPassengers(passengersList);
+            if (plane.checkEmptySeats() < mostSuitablePlane.checkEmptySeats() && mostSuitablePlane.checkEmptySeats() >= 0) {
                 mostSuitablePlane = plane;
             }
         }
@@ -117,6 +118,7 @@ public class Airport {
 
         for (int i = 0; i <this.hanger.size() ; i++) {
             Plane plane = this.hanger.get(i);
+            plane.replaceListOfPassengers(passengersList);
             if (plane.checkEmptySeats() < replacementPlane.checkEmptySeats()) {
                 replacementPlane = plane;
             }
